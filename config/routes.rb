@@ -1,4 +1,16 @@
 Construction::Application.routes.draw do
+  
+  get 'about' => 'pages#about'  
+  # we have a pages controller, but need to add an about action
+
+  # get "pages/home"  ED - was the default that showed up
+  root :to => 'pages#home' 
+  # ED - this sets the root, it was 'welcome#index'
+  # but we don't have a welcome#index, we have a pages#home
+  #don't forget to delete public/index.htlm
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
